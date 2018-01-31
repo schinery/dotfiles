@@ -9,12 +9,12 @@ install_apps() {
   # Appcleaner - Good for tiding up after removing an app
   brew cask install appcleaner
 
-  # Avira Antivirus
-  brew cask install avira-antivirus
-
   # Boxcryptor - Cloud file encryption
   # NOTE: Need to use --force if already installed...
-  brew cask install boxcryptor --force
+  # brew cask install boxcryptor --force
+
+  # Firefox
+  brew cask install firefox --force
 
   # Fliqlo clock screensaver
   brew cask install fliqlo
@@ -23,7 +23,7 @@ install_apps() {
   brew cask install google-chrome google-backup-and-sync
 
   # Paragon - for NTFS read/write, requires account
-  brew cask install paragon-ntfs
+  # brew cask install paragon-ntfs
 
   # Spotify
   brew cask install spotify spotify-notifications
