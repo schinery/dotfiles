@@ -17,11 +17,17 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
-read -p "What do you want you computer name to be? " -n 40;
-sudo scutil --set ComputerName $REPLY
-sudo scutil --set HostName $REPLY
-sudo scutil --set LocalHostName $REPLY
+
+
+read -p "Do you want to rename your computer? (y/n) " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  # Set computer name (as done via System Preferences → Sharing)
+  read -p "What do you want you computer name to be? " -n 40;
+  sudo scutil --set ComputerName $REPLY
+  sudo scutil --set HostName $REPLY
+  sudo scutil --set LocalHostName $REPLY
+fi;
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
