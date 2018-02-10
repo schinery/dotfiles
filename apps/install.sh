@@ -16,11 +16,17 @@ install_apps() {
   # NOTE: Need to use --force if already installed...
   brew cask install boxcryptor --force
 
+  # Firefox
+  brew cask install firefox
+
   # Fliqlo clock screensaver
   brew cask install fliqlo
 
   # Google Stuff
   brew cask install google-chrome google-backup-and-sync
+
+  # Mullvad VPN
+  brew cask install mullvad
 
   # Paragon - for NTFS read/write, requires account
   brew cask install paragon-ntfs

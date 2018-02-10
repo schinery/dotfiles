@@ -45,7 +45,8 @@ install_dev_tools() {
 
   GEMS_FILE=~/.rvm/gemsets/global.gems
 
-  rvm @global do gem install awesome_print
+  rvm install 2.4.2 --default
+  rvm @global --create do gem install awesome_print
   GEM_NAME="awesome_print"
   grep -w "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
