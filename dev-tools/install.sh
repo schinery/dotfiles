@@ -46,16 +46,17 @@ install_dev_tools() {
   GEMS_FILE=~/.rvm/gemsets/global.gems
 
   rvm install 2.4.2 --default
-  rvm @global --create do gem install awesome_print
-  GEM_NAME="awesome_print"
-  grep -w "$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
 
-  rvm @global do gem install bundler
-  GEM_NAME="bundler"
-  grep -w "\A$GEM_NAME" "$GEMS_FILE" || echo "$GEM_NAME" >> "$GEMS_FILE"
+  for gemName in awesome_print bundler reek rsense rubocop; do
+    rvm @global --create do gem install $gemName
+    grep -w "$gemName" "$GEMS_FILE" || echo "$gemName" >> "$GEMS_FILE"
+  done
 
   # Ngrok
   brew cask install ngrok
+
+  # Java
+  brew cask install java
 
   # VirtualBox
   brew cask install virtualbox
