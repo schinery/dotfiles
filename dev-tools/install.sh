@@ -14,8 +14,8 @@ is_pg_installed() {
   type pg_ctl >/dev/null 2>&1
 }
 
-is_rvm_installed() {
-  type rvm >/dev/null 2>&1
+is_rbenv_installed() {
+  type rbenv >/dev/null 2>&1
 }
 
 install_dev_tools() {
@@ -38,28 +38,13 @@ install_dev_tools() {
     brew services start postgresql
   fi
 
-  if ! is_rvm_installed; then
-    echo -e "\033[1;32mInstalling RVM...\033[0m"
-    curl -L https://get.rvm.io | bash -s stable
+  if ! is_rbenv_installed; then
+    echo -e "\033[1;32mInstalling rbenv...\033[0m"
+    brew install rbenv
+    eval "$(rbenv init -)"
+    rbenv install 2.4.2
+    gem install awesome_print bundler reek rubocop
   fi
-
-  GEMS_FILE=~/.rvm/gemsets/global.gems
-
-  rvm install 2.4.2 --default
-
-  for gemName in awesome_print bundler reek rsense rubocop; do
-    rvm @global --create do gem install $gemName
-    grep -w "$gemName" "$GEMS_FILE" || echo "$gemName" >> "$GEMS_FILE"
-  done
-
-  # Ngrok
-  brew cask install ngrok
-
-  # Java
-  brew cask install java
-
-  # VirtualBox
-  brew cask install virtualbox
 
   echo -e "\033[1;32mFinished installing dev tools\033[0m"
   echo ""

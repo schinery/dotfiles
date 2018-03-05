@@ -25,11 +25,9 @@ for option in autocd globstar; do
 done
 
 # Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-	source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
@@ -53,6 +51,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Add thefuck alias
 eval $(thefuck --alias)
+
+# Add rbenv...
+eval "$(rbenv init -)"
 
 # NVM settings
 export NVM_DIR="$HOME/.nvm"
