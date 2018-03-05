@@ -21,7 +21,7 @@ set_dock_items() {
 
   dockutil --add /Applications/1Password.app
   dockutil --add /Applications/Spotify.app
-  dockutil --add /Applications/Firefox.app
+  dockutil --add /Applications/Google\ Chrome.app
 
   dockutil --add /Applications/Atom.app
   dockutil --add /Applications/Sourcetree.app
