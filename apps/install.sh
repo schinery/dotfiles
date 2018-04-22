@@ -38,9 +38,6 @@ install_apps() {
   brew cask install iterm2 --force
   curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
-  # VirtualBox
-  brew cask install virtualbox --force
-
   # Spotify
   brew cask install spotify spotify-notifications --force
 
@@ -50,6 +47,9 @@ install_apps() {
   # WhatsApp
   brew cask install whatsapp --force
 
+  # VirtualBox
+  brew cask install virtualbox --force
+  
   echo -e "\033[1;32mFinished installing other apps\033[0m"
   echo ""
 }

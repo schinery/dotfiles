@@ -36,6 +36,7 @@ install_dev_tools() {
     echo -e "\033[1;32mInstalling Postgres...\033[0m"
     brew install postgres
     brew services start postgresql
+    brew cask install psequel
   fi
 
   if ! is_rbenv_installed; then
@@ -43,8 +44,10 @@ install_dev_tools() {
     brew install rbenv
     eval "$(rbenv init -)"
     rbenv install 2.4.2
-    gem install awesome_print bundler reek rubocop
   fi
+
+  rbenv global 2.4.2
+  gem install awesome_print bundler reek rubocop
 
   echo -e "\033[1;32mFinished installing dev tools\033[0m"
   echo ""

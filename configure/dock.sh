@@ -31,7 +31,7 @@ set_dock_items() {
   dockutil --add /Applications/Mail.app
   dockutil --add /Applications/Contacts.app
   dockutil --add /Applications/Calendar.app
-  dockutil --add /Applications/Wunderlist.app
+  # dockutil --add /Applications/Wunderlist.app
   dockutil --add /Applications/Slack.app
   dockutil --add /Applications/Messages.app
   dockutil --add /Applications/WhatsApp.app
