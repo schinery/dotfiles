@@ -24,13 +24,11 @@ function doIt() {
   ./brew/install.sh
   ./bash/install.sh
   ./git/install.sh
-  ./atom/install.sh
-  ./dev-tools/install.sh
   ./apps/install.sh
+  ./dev-tools/install.sh
 
   echo -e "\033[1;32mConfiguring OS...\033[0m";
   echo "";
-  ./configure/software-update.sh
   ./configure/filevault.sh
   ./configure/defaults.sh
   ./configure/umask.sh

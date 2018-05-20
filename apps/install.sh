@@ -2,10 +2,10 @@
 
 set -euf -o pipefail
 
-install_apps() {
-  local name="Bash"
+install_brew_cask_apps() {
+  brew install cask
 
-  echo -e "\033[1;32mInstalling other apps...\033[0m"
+  echo -e "\033[1;32mInstalling brew cask apps...\033[0m"
   # Appcleaner - Good for tiding up after removing an app
   brew cask install appcleaner --force
 
@@ -38,6 +38,9 @@ install_apps() {
   brew cask install iterm2 --force
   curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
+  # Slack
+  brew cask install slack --force
+
   # Spotify
   brew cask install spotify spotify-notifications --force
 
@@ -49,13 +52,38 @@ install_apps() {
 
   # VirtualBox
   brew cask install virtualbox --force
-  
-  echo -e "\033[1;32mFinished installing other apps\033[0m"
+
+  echo -e "\033[1;32mFinished installing brew apps\033[0m"
   echo ""
 }
 
-read -p "Do you want to try and (re)install your apps? (y/n) " -n 1;
+install_mas_apps() {
+  brew install mas
+
+  echo -e "\033[1;32mInstalling mas apps...\033[0m"
+  mas install 405399194 # Kindle (1.21.1)
+  mas install 406056744 # Evernote (7.1)
+  mas install 410628904 # Wunderlist (3.4.8)
+  mas install 425424353 # The Unarchiver (3.11.5)
+  mas install 443987910 # 1Password (6.8.8)
+  mas install 497799835 # Xcode (9.3.1)
+  xcode-select --install
+  echo -e "\033[1;32mFinished installing mas apps\033[0m"
+  echo ""
+}
+
+install_software_updates() {
+  echo -e "\033[1;32mInstalling macOS software updates...\033[0m"
+  softwareupdate --install --all
+  echo -e "\033[1;32mFinished macOS software updates\033[0m"
+  echo ""
+}
+
+read -p "Do you want to try and (re)install your brew and mas installed apps? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  install_apps
+  install_brew_cask_apps
+  install_mas_apps
+  install_software_updates
+  ./atom.sh
 fi;
