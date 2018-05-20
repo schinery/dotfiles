@@ -2,18 +2,12 @@
 
 function bunmit() {
   echo -e "\033[1;32mChecking gems to update...\033[0m"
-  bundle update && rake test && git add Gemfile Gemfile.lock && git commit -m "Gem update" && git push
+  bundle update && bundle exec rake test && git add Gemfile Gemfile.lock && git commit -m "Gem update" && git push
   echo -e "\033[1;32mUpdate done\033[0m"
 }
 
-function gitcleanup() {
-  echo -e "\033[1;32mRunning cleanup of remote Git repos...\033[0m"
-  git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d | git fetch -p
-  echo -e "\033[1;32mCleanup done\033[0m"
-}
-
-function gitcleanupmerged() {
-  echo -e "\033[1;32mRunning cleanup of remote Git repos...\033[0m"
-  git fetch -p && git branch -r --merged | grep -v '\*\|master\|develop' | sed 's/origin\///' | xargs -n 1 git push --delete origin
-  echo -e "\033[1;32mCleanup done\033[0m"
+function furypush() {
+  echo -e "\033[1;32mFury pushing...\033[0m"
+  git push --all && git push --tags && git push fury master
+  echo -e "\033[1;32mFury push\033[0m"
 }
