@@ -52,16 +52,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Add thefuck alias
 eval $(thefuck --alias)
 
-# Add rbenv...
+# Add rbenv and nodenv
 eval "$(rbenv init -)"
-
-# NVM settings
-export NVM_DIR="$HOME/.nvm"
-export NVM_SYMLINK_CURRENT=true
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-if [ -f ".nvmrc" ]; then
-  nvm use
-fi
+eval "$(nodenv init -)"
