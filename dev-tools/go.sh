@@ -2,16 +2,24 @@
 
 set -euf -o pipefail
 
-is_go_installed() {
-  type go >/dev/null 2>&1
+GO_VERSION=1.11.2
+
+is_goenv_installed() {
+  type goenv >/dev/null 2>&1
 }
 
-if ! is_go_installed; then
+if ! is_goenv_installed; then
   echo -e "\033[1;32mInstalling Go...\033[0m"
-  brew reinstall go
-  go get golang.org/x/tools/cmd/godoc
-  # go get golang.org/x/tools/cmd/vet
-  go get github.com/golang/lint/golint
+  brew reinstall goenv
+  eval "$(goenv init -)"
+  goenv install $GO_VERSION
+  goenv global $GO_VERSION
+  goenv local $GO_VERSION
+
+  go get -u golang.org/x/tools/cmd/godoc
+  go get -u github.com/golang/dep/cmd/dep
+  # go get -u golang.org/x/tools/cmd/vet
+  go get -u github.com/golang/lint/golint
   # The below is for the Atom go-plus extension...
   go get -u golang.org/x/tools/cmd/goimports
   go get -u golang.org/x/tools/cmd/gorename
