@@ -23,6 +23,7 @@ dockutil --add /Applications/Spotify.app
 dockutil --add /Applications/Google\ Chrome.app
 
 dockutil --add /Applications/Atom.app
+dockutil --add /Applications/Xcode.app
 dockutil --add /Applications/Sourcetree.app
 dockutil --add /Applications/PSequel.app
 dockutil --add /Applications/iTerm.app
@@ -31,9 +32,9 @@ dockutil --add /Applications/Mail.app
 dockutil --add /Applications/Contacts.app
 dockutil --add /Applications/Calendar.app
 dockutil --add /Applications/Wunderlist.app
-# dockutil --add /Applications/Slack.app
 dockutil --add /Applications/Messages.app
 dockutil --add /Applications/WhatsApp.app
+dockutil --add /Applications/Slack.app
 
 dockutil --add /Applications --view grid --display folder --sort name
 dockutil --add '~/Downloads' --view grid --display folder --sort name
