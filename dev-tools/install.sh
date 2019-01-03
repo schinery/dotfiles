@@ -6,7 +6,6 @@ install_dev_tools() {
   echo -e "\033[1;32mInstalling dev tools...\033[0m"
 
   # Comment out as you see fit...
-  ./go.sh
   ./nodenv.sh
   ./postgres.sh
   ./rbenv.sh

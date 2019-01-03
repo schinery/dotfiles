@@ -1,6 +1,6 @@
 # Dotfiles
 
-A (semi-)automated setup of my macOS High Sierra environment. 
+A (semi-)automated setup of my macOS environment. 
 
 ## Big Fat Warning!
 

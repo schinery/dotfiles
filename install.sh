@@ -2,7 +2,10 @@
 
 set -euf -o pipefail
 
-function doIt() {
+echo -e "\033[1;31mWARNING: This script will attempt to install Brew, various apps and overwrite existing files in your home directory. \033[0m";
+read -p "Are you sure you want to continue? (y/n) " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Install dotfiles before anything else, so we can write to them if need be.
   echo -e "\033[1;32mInstalling dotfiles...\033[0m";
   echo "";
@@ -36,13 +39,4 @@ function doIt() {
   # ./configure/login-items.sh
 
   source ~/.bash_profile;
-}
-
-echo -e "\033[1;31mWARNING: This script will attempt to install Brew, various apps and overwrite existing files in your home directory. \033[0m";
-read -p "Are you sure you want to continue? (y/n) " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  doIt;
 fi;
-
-unset doIt;

@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 
-RUBY_VERSION=2.5.1
+RUBY_VERSION=2.6.0
 
 is_rbenv_installed() {
   type rbenv >/dev/null 2>&1

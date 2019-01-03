@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 
-NODE_VERSION=8.11.3
+NODE_VERSION=10.15.0
 
 is_nodenv_installed() {
   type nodenv >/dev/null 2>&1
