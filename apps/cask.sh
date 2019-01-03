@@ -5,6 +5,9 @@ set -euf -o pipefail
 brew install cask --force
 
 echo -e "\033[1;32mInstalling brew cask apps...\033[0m"
+# 1Password...
+brew cask install 1password --force
+
 # Appcleaner - Good for tiding up after removing an app
 brew cask install appcleaner --force
 

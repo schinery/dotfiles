@@ -10,7 +10,6 @@ echo ""
 brew install mas --force
 
 echo -e "\033[1;32mInstalling mas apps...\033[0m"
-mas install 1333542190 # 1Password 7 (7.0.4)
 mas install 405399194 # Kindle (1.21.1)
 mas install 406056744 # Evernote (7.1)
 mas install 410628904 # Wunderlist (3.4.8)
