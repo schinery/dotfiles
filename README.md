@@ -1,12 +1,16 @@
 # Dotfiles
 
-A (semi-)automated setup of my macOS environment. 
+A (semi-)automated setup of my macOS environment.
 
 ## Big Fat Warning!
 
 If you want to give this a try, you should first fork this repository, review the code, and remove things you don’t want or need.
 
 Don’t blindly use my settings unless you know what that entails. **Use at your own risk!**
+
+## Before You Run
+
+Before you run this your terminal app will need full disk access System Preferences. See [this](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-436099833) for details.
 
 ## Install
 

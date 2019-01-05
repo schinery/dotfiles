@@ -1,12 +1,10 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{aliases,functions,path}; do
+for file in ~/.{aliases,evals,exports,functions,path}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
-
-export EDITOR="atom"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -35,7 +33,7 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 fi
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+if type _git > /dev/null 2>&1 && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
 fi;
 
@@ -48,10 +46,3 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-# Add thefuck alias
-eval $(thefuck --alias)
-
-# Add rbenv and nodenv
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"

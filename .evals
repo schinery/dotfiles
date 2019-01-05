@@ -1,0 +1,6 @@
+# Add thefuck alias
+eval $(thefuck --alias)
+# Add rbenv to shell
+eval "$(rbenv init -)"
+# Add nodenv to shell
+eval "$(nodenv init -)"

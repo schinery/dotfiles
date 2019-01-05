@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 
-read -p "Do you want to try and (re)install your apps? (y/n) " -n 1;
+read -p "Do you want to try and (re)install your dev tools? (y/n) " -n 1;
 echo -e "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   dir="$(dirname "$0")"
