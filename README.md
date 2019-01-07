@@ -22,7 +22,9 @@ To do the big bang install run the following:
 
 This will install all bash files, Brew, apps and dev tools, as well as configure the OS. You will be prompted for input so don't just run and go make a cup of tea.
 
-You can of course also run the various scripts individually. Be aware that the scripts in `apps` and `dev` require both Brew and Brew Cask to be installed.
+You can of course also run the various scripts individually.
+
+Note: Most of the scripts in `apps` and `dev` require both Brew and Brew Cask to be installed for them to run.
 
 ## Thanks To...
 
