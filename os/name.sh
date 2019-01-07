@@ -21,5 +21,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo scutil --set HostName $REPLY
   sudo scutil --set LocalHostName $REPLY
   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $REPLY
+
   echo -e "";
 fi;
