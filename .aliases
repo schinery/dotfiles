@@ -16,6 +16,7 @@ alias w="cd ~/Workspace"
 
 # Cmds
 alias g="git"
+alias rcreds="EDITOR='code --wait' rails credentials:edit"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
