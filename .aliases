@@ -17,6 +17,9 @@ alias w="cd ~/Workspace"
 # Cmds
 alias g="git"
 alias rcreds="EDITOR='code --wait' rails credentials:edit"
+alias rtest="bundle exec ruby -I test"
+alias rake="bundle exec rake"
+alias rails="bundle exec rails"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -107,9 +110,8 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
-# Disable Spotlight
+# Disable/Enable Spotlight
 alias spotoff="sudo mdutil -a -i off"
-# Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
