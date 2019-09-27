@@ -10,7 +10,7 @@ Don’t blindly use my settings unless you know what that entails. **Use at your
 
 ## Before You Start
 
-Before you run this `Terminal.app` (or `iTerm.app` if you have that already installed) will need full disk access System Preferences. See [this](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-436099833) for details.
+Before you run this, `Terminal.app` (or `iTerm.app` if you have that already installed) will need full disk access System Preferences. See [this](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-436099833) for details.
 
 ## Install
 
@@ -30,8 +30,8 @@ Note: Most of the scripts in `apps` and `dev` require both Brew and Brew Cask to
 
 Copy and pasted from some of the following:
 
-* [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
-* [Cameron Yule](https://github.com/cameronyule/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+- [Cameron Yule](https://github.com/cameronyule/dotfiles)
 
 ## License
 
