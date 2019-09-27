@@ -2,5 +2,8 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+# Add Flutter to Path
+export PATH="$HOME/bin/flutter/bin/:$PATH"
+
 # Add Yarn to Path
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
