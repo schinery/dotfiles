@@ -20,6 +20,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         --exclude "README.md" \
         -avh --no-perms . ~;
 
+  # TODO: Confirm if needed after new install...
+  # chmod -R -x .aliases .bash_profile .bashrc .exports .extra .functions .gemrc .gitconfig .gitignore_global .inputrc .path
+
   # Run install/setup scripts...
   ./brew/install.sh
   ./dev/install.sh
