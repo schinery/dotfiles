@@ -1,14 +1,10 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
 is_brew_installed() {
   type brew >/dev/null 2>&1
 }
 
 if ! is_brew_installed; then
   echo -e "\033[1;32mInstalling Brew...\033[0m"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby echo -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   echo -e "\033[1;32mBrew is already installed, updating...\033[0m"
 fi
@@ -36,21 +32,30 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
-# Install Bash 4.
-brew install bash bash-completion2
-
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
-
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget` 
+brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install other stuff...
 brew install cask openssh openssl rsync screen thefuck
-echo -e ""
+
+# Install oh-my-zsh...
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install env files...
+echo -e "\033[1;32mInstalling env files...\033[0m";
+
+echo -e "";
+rsync --exclude ".git" \
+      --exclude "apps" \
+      --exclude "brew" \
+      --exclude "dev" \
+      --exclude "env" \
+      --exclude "os" \
+      --exclude ".DS_Store" \
+      --exclude "install.sh" \
+      --exclude "LICENSE.md" \
+      --exclude "README.md" \
+      -avh --no-perms . ~;

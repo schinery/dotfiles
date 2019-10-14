@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
 read -p "Do you want to try and (re)install your dev tools? (y/n) " -n 1;
 echo -e "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then

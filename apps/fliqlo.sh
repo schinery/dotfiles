@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mInstalling Fliqlo...\033[0m"
+ echo -e "\033[1;32mInstalling Fliqlo...\033[0m"
 # Fliqlo clock screensaver
 brew cask install fliqlo
 # Set Fliqlo as the screensaver

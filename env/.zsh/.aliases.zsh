@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -85,7 +85,7 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # JavaScriptCore REPL
 jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
-[ -e "${jscbin}" ] && alias jsc="${jscbin}";
+[ echo -e "${jscbin}" ] && alias jsc="${jscbin}";
 unset jscbin;
 
 # Trim new lines and copy to clipboard

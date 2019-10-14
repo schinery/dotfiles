@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mConfiguring activity monitor...\033[0m"
+ echo -e "\033[1;32mConfiguring activity monitor...\033[0m"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -22,5 +18,4 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # killall "Activity Monitor" &> /dev/null
-
 echo -e ""

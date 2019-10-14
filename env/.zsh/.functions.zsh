@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 
 function bunmit() {
   echo -e "\033[1;32mChecking gems to update...\033[0m"

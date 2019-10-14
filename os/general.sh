@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mConfiguring general settings...\033[0m"
+ echo -e "\033[1;32mConfiguring general settings...\033[0m"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change

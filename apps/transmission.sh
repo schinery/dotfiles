@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mInstalling Transmission...\033[0m"
+ echo -e "\033[1;32mInstalling Transmission...\033[0m"
 brew cask install transmission
 
 # Use `~/Downloads/Torrents` to store incomplete downloads

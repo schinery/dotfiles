@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
 
-set -euf -o pipefail
+
+
 
 read -p "Do you want to try and (re)configure your OS? (y/n) " -n 1;
 echo -e "";

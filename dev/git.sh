@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mInstalling Git and Git tools...\033[0m"
+ echo -e "\033[1;32mInstalling Git and Git tools...\033[0m"
 brew install git git-flow-avh bash-git-prompt
 echo -e ""
 

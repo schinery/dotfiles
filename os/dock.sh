@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mConfiguring dock...\033[0m"
+ echo -e "\033[1;32mConfiguring dock...\033[0m"
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -112,10 +108,10 @@ dockutil --add /Applications/App\ Store.app
 dockutil --add /Applications/1Password\ 7.app
 dockutil --add /Applications/Spotify.app
 dockutil --add /Applications/Google\ Chrome.app
-dockutil --add /Applications/Atom.app
+dockutil --add /Applications/Visual\ Studio\ Code.app
 dockutil --add /Applications/Xcode.app
 dockutil --add /Applications/Sourcetree.app
-dockutil --add /Applications/PSequel.app
+dockutil --add /Applications/TablePlus.app
 dockutil --add /Applications/iTerm.app
 dockutil --add /Applications/Mail.app
 dockutil --add /Applications/Contacts.app
@@ -124,6 +120,7 @@ dockutil --add /Applications/Wunderlist.app
 dockutil --add /Applications/Messages.app
 dockutil --add /Applications/WhatsApp.app
 dockutil --add /Applications/Slack.app
+dockutil --add /Applications/Keybase.app
 dockutil --add /Applications --view grid --display folder --sort name
 dockutil --add '~/Downloads' --view grid --display folder --sort name
 

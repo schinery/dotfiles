@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
-echo -e "\033[1;32mInstalling Mas and apps...\033[0m"
+ echo -e "\033[1;32mInstalling Mas and apps...\033[0m"
 brew install mas
 mas install 405399194 # Kindle
 mas install 406056744 # Evernote

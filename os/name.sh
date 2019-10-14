@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-set -euf -o pipefail
-
 echo -e "\033[1;32mConfiguring computer name...\033[0m"
 echo -e "";
 
