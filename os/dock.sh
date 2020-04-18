@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring dock...\033[0m"
+ echo "Configuring dock..."
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -127,4 +127,4 @@ dockutil --add '~/Downloads' --view grid --display folder --sort name
 # Restart the dock
 # killall "Dock" &> /dev/null
 
-echo -e ""
+echo ""

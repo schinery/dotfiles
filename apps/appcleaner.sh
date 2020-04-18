@@ -1,3 +1,3 @@
-echo -e "\033[1;32mInstalling Appcleaner...\033[0m"
+echo "Installing Appcleaner..."
 brew cask install appcleaner
-echo -e ""
+echo ""

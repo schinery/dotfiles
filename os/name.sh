@@ -1,8 +1,8 @@
-echo -e "\033[1;32mConfiguring computer name...\033[0m"
-echo -e "";
+echo "Configuring computer name..."
+echo "";
 
 read -p "Do you want to rename your computer? (y/n) " -n 1;
-echo -e "";
+echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Ask for the administrator password upfront
@@ -18,5 +18,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo scutil --set LocalHostName $REPLY
   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $REPLY
 
-  echo -e "";
+  echo "";
 fi;

@@ -1,3 +1,3 @@
- echo -e "\033[1;32mSlack...\033[0m"
+ echo "Slack..."
 brew cask install slack
-echo -e ""
+echo ""

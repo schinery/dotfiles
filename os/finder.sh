@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring finder...\033[0m"
+ echo "Configuring finder..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -112,7 +112,7 @@ sudo chflags nohidden /Volumes
 
 # Remove Dropbox’s green checkmark icons in Finder
 # file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-# [ echo -e "${file}" ] && mv -f "${file}" "${file}.bak"
+# [ echo "${file}" ] && mv -f "${file}" "${file}.bak"
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -123,4 +123,4 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # killall "Finder" &> /dev/null
 
-echo -e ""
+echo ""

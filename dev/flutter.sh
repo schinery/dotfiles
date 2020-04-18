@@ -1,4 +1,4 @@
- echo -e "\033[1;32mInstalling Flutter iOS deps...\033[0m"
+ echo "Installing Flutter iOS deps..."
 brew update
 brew install --HEAD usbmuxd
 brew link usbmuxd
@@ -7,4 +7,4 @@ brew install ideviceinstaller
 brew install ios-deploy
 brew install cocoapods
 pod setup
-echo -e "";
+echo "";

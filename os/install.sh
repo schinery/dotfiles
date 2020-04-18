@@ -3,7 +3,7 @@
 
 
 read -p "Do you want to try and (re)configure your OS? (y/n) " -n 1;
-echo -e "";
+echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   dir="$(dirname "$0")"
 

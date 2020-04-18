@@ -1,4 +1,4 @@
- echo -e "\033[1;32mInstalling Google apps...\033[0m"
+ echo "Installing Google apps..."
 brew cask install google-chrome google-backup-and-sync
 
 # Disable the all too sensitive backswipe on trackpads
@@ -12,4 +12,4 @@ defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
-echo -e ""
+echo ""

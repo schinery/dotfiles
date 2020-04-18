@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring screen...\033[0m"
+ echo "Configuring screen..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -30,4 +30,4 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-echo -e ""
+echo ""

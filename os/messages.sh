@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring messages...\033[0m"
+ echo "Configuring messages..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -15,4 +15,4 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 # killall "Messages" &> /dev/null
 
-echo -e ""
+echo ""

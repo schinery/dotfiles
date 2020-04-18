@@ -1,14 +1,14 @@
- echo -e "\033[1;32mInstalling Git and Git tools...\033[0m"
+ echo "Installing Git and Git tools..."
 brew install git git-flow-avh bash-git-prompt
-echo -e ""
+echo ""
 
 read -p "Do you want to set your global git creds? (y/n) " -n 1;
-echo -e "";
+echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   read -p "What do you want to set as your global Git name? "
   git config --global user.name $REPLY
 
   read -p "What do you want to set as your global Git email? "
   git config --global user.email $REPLY
-  echo -e "";
+  echo "";
 fi;

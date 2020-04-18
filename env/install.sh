@@ -3,10 +3,10 @@ is_brew_installed() {
 }
 
 if ! is_brew_installed; then
-  echo -e "\033[1;32mInstalling Brew...\033[0m"
-  /usr/bin/ruby echo -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Installing Brew..."
+  /usr/bin/ruby echo "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-  echo -e "\033[1;32mBrew is already installed, updating...\033[0m"
+  echo "Brew is already installed, updating..."
 fi
 
 # Make sure we’re using the latest Homebrew.
@@ -41,13 +41,21 @@ brew install gnupg
 # Install other stuff...
 brew install cask openssh openssl rsync screen thefuck
 
+# Install fonts
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+
 # Install oh-my-zsh...
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Download powerlevel10k theme
+mkdir -p $ZSH_CUSTOM/themes
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 # Install env files...
-echo -e "\033[1;32mInstalling env files...\033[0m";
+echo "Installing env files...";
 
-echo -e "";
+echo "";
 rsync --exclude ".git" \
       --exclude "apps" \
       --exclude "brew" \

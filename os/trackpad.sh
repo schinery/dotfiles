@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring trackpad, mouse etc...\033[0m"
+ echo "Configuring trackpad, mouse etc..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -62,4 +62,4 @@ sudo systemsetup -settimezone "Europe/London" > /dev/null
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
-echo -e ""
+echo ""

@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring general settings...\033[0m"
+ echo "Configuring general settings..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -114,4 +114,4 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 # sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
-echo -e ""
+echo ""

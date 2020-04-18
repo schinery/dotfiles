@@ -1,5 +1,3 @@
-
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 # alias ...="cd ../.."
@@ -85,7 +83,7 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # JavaScriptCore REPL
 jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
-[ echo -e "${jscbin}" ] && alias jsc="${jscbin}";
+[ echo "${jscbin}" ] && alias jsc="${jscbin}";
 unset jscbin;
 
 # Trim new lines and copy to clipboard
@@ -148,4 +146,4 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias path='echo ${PATH//:/\\n}'

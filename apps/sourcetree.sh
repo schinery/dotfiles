@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Sourcetree...\033[0m"
+ echo "Installing Sourcetree..."
 brew cask install sourcetree
-echo -e ""
+echo ""

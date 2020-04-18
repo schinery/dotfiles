@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring ssd...\033[0m"
+ echo "Configuring ssd..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -23,4 +23,4 @@ sudo pmset -a hibernatemode 0
 # # …and make sure it can’t be rewritten
 # sudo chflags uchg /private/var/vm/sleepimage
 
-echo -e ""
+echo ""

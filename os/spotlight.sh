@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring spotlight...\033[0m"
+ echo "Configuring spotlight..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -60,4 +60,4 @@ sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
 sudo mdutil -E / > /dev/null
 
-echo -e ""
+echo ""

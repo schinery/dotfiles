@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring app store...\033[0m"
+ echo "Configuring app store..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -31,4 +31,4 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
-echo -e ""
+echo ""

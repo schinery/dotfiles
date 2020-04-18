@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Java...\033[0m"
+ echo "Installing Java..."
 brew cask install java
-echo -e "";
+echo "";

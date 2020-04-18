@@ -1,3 +1,3 @@
-echo -e "\033[1;32mInstalling 1Password...\033[0m"
+echo "Installing 1Password..."
 brew cask install 1password
-echo -e ""
+echo ""

@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring photos...\033[0m"
+ echo "Configuring photos..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -9,4 +9,4 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # killall "Photos" &> /dev/null
 
-echo -e ""
+echo ""

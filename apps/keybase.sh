@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Keybase...\033[0m"
+ echo "Installing Keybase..."
 brew cask install keybase
-echo -e ""
+echo ""

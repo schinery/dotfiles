@@ -8,7 +8,7 @@ export ZSH="/Users/stu/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,9 +105,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Load and configure Pure theme...
+# fpath+=("$HOME/.zsh/pure")
+# autoload -U promptinit; promptinit
+# prompt pure
+# # Change the path color...
+# zstyle :prompt:pure:path color green
+
 # Add custom aliases and functions...
-test echo -e "${HOME}/.zsh/.aliases.zsh" && source "${HOME}/.zsh/.aliases.zsh"
-test echo -e "${HOME}/.zsh/.functions.zsh" && source "${HOME}/.zsh/.functions.zsh"
+test -e "${HOME}/.zsh/.aliases.zsh" && source "${HOME}/.zsh/.aliases.zsh"
+test -e "${HOME}/.zsh/.functions.zsh" && source "${HOME}/.zsh/.functions.zsh"
+
+# Add syntax highlighting...
+# test -e "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" && source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # EVALS
 # Load Nodenv...
@@ -116,6 +126,8 @@ eval "$(nodenv init -)"
 # EXPORTS
 # Set editor to VS Code for stuff like git...
 export EDITOR="code"
+# Add Brew sbin to Path...
+export PATH="/usr/local/sbin:$PATH"
 # Add Flutter to Path...
 export PATH="$HOME/bin/flutter/bin/:$PATH"
 # Add Yarn to Path...
@@ -126,3 +138,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias gitconfig="code ~/.gitconfig"
 # Open zshrc in VS Code...
 alias zshrc="code ~/.zshrc"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring time machine...\033[0m"
+ echo "Configuring time machine..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -17,4 +17,4 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # hash tmutil &> /dev/null && sudo tmutil disablelocal
 hash tmutil &> /dev/null && sudo tmutil disable
 
-echo -e ""
+echo ""

@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Mullvad VPN...\033[0m"
+ echo "Installing Mullvad VPN..."
 brew cask install mullvadvpn
-echo -e ""
+echo ""

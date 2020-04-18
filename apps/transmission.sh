@@ -1,4 +1,4 @@
- echo -e "\033[1;32mInstalling Transmission...\033[0m"
+ echo "Installing Transmission..."
 brew cask install transmission
 
 # Use `~/Downloads/Torrents` to store incomplete downloads
@@ -32,4 +32,4 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Randomize port on launch
 defaults write org.m0k.transmission RandomPort -bool true
-echo -e ""
+echo ""

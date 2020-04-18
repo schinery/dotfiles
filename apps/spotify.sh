@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Spotify...\033[0m"
+ echo "Installing Spotify..."
 brew cask install spotify
-echo -e ""
+echo ""

@@ -1,3 +1,3 @@
- echo -e "\033[1;32mInstalling Firefox...\033[0m"
+ echo "Installing Firefox..."
 brew cask install firefox
-echo -e ""
+echo ""

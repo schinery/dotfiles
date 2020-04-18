@@ -1,4 +1,4 @@
- echo -e "\033[1;32mConfiguring mail...\033[0m"
+ echo "Configuring mail..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -27,4 +27,4 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # killall "Mail" &> /dev/null
 
-echo -e ""
+echo ""
